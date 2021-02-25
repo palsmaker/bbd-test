@@ -27,4 +27,9 @@ public class LoginRunners {
 //tags = {"@smoke, @sprint"} this is OR
 //tags = {"@smoke", "@sprint"} this is and
 //based on the criticality of the test script we can use tags to prioritize
-//can be used with cucumber and command lines as well
+//can be used with cucumber and command prompt as well
+//Hooks is used for prerequisites of a class for eg @Before and @After methods can be in a hooks separate java class 
+//DataDriven = getting data from some data source
+//keyword driven = using some keywords, for example browser we can use url for the test case, creating a level of obstruction
+//BDD framework
+//Hybrid (BDD with datasource)
