@@ -12,8 +12,8 @@ import cucumber.api.junit.Cucumber;
 //{"@smoketest, @sprint1"} means or so which ever feature file has the either of the tags will run
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "./src/test/java/features/login.feature",
- tags = {"@dashboard"},
+@CucumberOptions(features = "./src/test/java/features/",
+ tags = {"@smoke", "@sprint"}, 
  glue = {"steps" },
  dryRun = false,
  monochrome = true,
@@ -23,3 +23,8 @@ import cucumber.api.junit.Cucumber;
 public class LoginRunners {
 
 }
+
+//tags = {"@smoke, @sprint"} this is OR
+//tags = {"@smoke", "@sprint"} this is and
+//based on the criticality of the test script we can use tags to prioritize
+//can be used with cucumber and command lines as well

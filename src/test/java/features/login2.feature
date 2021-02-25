@@ -1,5 +1,5 @@
-@dashboard @smoke @sprint1 @endtoend
-    Feature: As a user I want a login page so that only authentic 
+@smoke, @Sanity, @Sprint
+Feature: As a user I want a login page so that only authentic 
 	users will be able to login 
 	
 #	managing number of test cases in test suite, we can tag them to invoke them as and when reqd eg,smoke,sanity test help organize
@@ -19,4 +19,3 @@
 	Examples:
 	|username|password|
 	|demo@techfios|abc123|
-	
