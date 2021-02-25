@@ -29,8 +29,7 @@ public class LoginSteps extends BasePage {
 	DashBoardPage dashboardPage; 
 	Database database;
 
-	// Create a marking - calling Login class and enter details
-
+	// @Before and @After annotations
 	
 	  @Before 
 	  public void beforeRun() { 
@@ -52,12 +51,12 @@ public class LoginSteps extends BasePage {
 		login.enterUserName(database.get("username"));
 		login.enterPassword(database.get("passowrd"));
 	}
-	//Using parameterizing and not hard coding to enter multiple different data(scenario outline)
+	//Using dataparameterizing and not hard coding to enter multiple different data(scenario outline)
 	@When("^I enter \"([^\"]*)\" and \"([^\"]*)\"$")
-	    		public void I_enter_and(String username, String password){
+	    		public void I_enter_and(String username, String password) throws Throwable{
 	    			login.enterUserName(username);
 	    			login.enterPassword(password);
-	    			//screenShot(driver,"C:\\Users\\Dhrubajyoti\\Desktop\\TF Pallavi\\Selenium\\Screenshot\\test.jpg");
+	    			screenShot(driver,"C:\\Users\\Dhrubajyoti\\Desktop\\TF Pallavi\\Selenium\\Screenshot\\test.jpg");
 	}
 
 	@When("^I click on sign in button$")

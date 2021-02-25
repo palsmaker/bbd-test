@@ -32,9 +32,9 @@ public class BasePage {
 	}
 
 	public void screenShot(WebDriver driver, String fileWithPath) throws Exception {
-	TakesScreenshot scrShot = ((TakesScreenshot)driver);
-	File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);// Create output file of the screenshot
-	File DestFile = new File(fileWithPath);// where to save it 
+	TakesScreenshot scrShot = ((TakesScreenshot)driver); // cast concept to convert our driver to takescreenshot
+	File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);// Create source file of the screenshot
+	File DestFile = new File(fileWithPath);// where to save it in destination file 
 	FileUtils.copyFile(SrcFile, DestFile);// saving to the local machine,copying scrfile to destfile
 }
 	

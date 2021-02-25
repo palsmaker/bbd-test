@@ -37,6 +37,10 @@ formatter.scenarioOutline({
     {
       "line": 9,
       "value": "#\tThen Dashboard page should display"
+    },
+    {
+      "line": 11,
+      "value": "#\twhen there is more than one scenario or test cases we use scenario outline with examples for data parameterization with tags"
     }
   ],
   "line": 12,
@@ -92,7 +96,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 4655390016,
+  "duration": 5777608237,
   "status": "passed"
 });
 formatter.scenario({
@@ -141,7 +145,7 @@ formatter.match({
   "location": "LoginSteps.I_am_on_Techfios_site()"
 });
 formatter.result({
-  "duration": 148401730,
+  "duration": 140752721,
   "status": "passed"
 });
 formatter.match({
@@ -158,25 +162,25 @@ formatter.match({
   "location": "LoginSteps.I_enter_and(String,String)"
 });
 formatter.result({
-  "duration": 235434765,
+  "duration": 902890595,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.I_click_on_sign_in_button()"
 });
 formatter.result({
-  "duration": 2060063926,
+  "duration": 2678570115,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.dashboard_page_should_display()"
 });
 formatter.result({
-  "duration": 10807657,
+  "duration": 32797598,
   "status": "passed"
 });
 formatter.after({
-  "duration": 655627363,
+  "duration": 820413352,
   "status": "passed"
 });
 });

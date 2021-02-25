@@ -3,7 +3,7 @@ package runners;
 import org.junit.runner.RunWith;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
-
+//Stepdefination can be run through runer and also through features with the cucumber plugins
 //Is the bridge between feature file and steps where test cases are executed,has runtime configurations
 //Runtime configuration is created in login.feature, similar to the loginrunners.java. so we can run with cucumber too using tags
 //features = "./src/test/java/features/feature (then all feature class will appear) eg: all 50 feature files will appear
