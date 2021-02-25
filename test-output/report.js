@@ -2,7 +2,7 @@ $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.
 formatter.feature({
   "line": 2,
   "name": "As a user I want a login page so that only authentic",
-  "description": "users will be able to login\r\n   \r\n//Scenario: Valid users should be able to login \r\n//Given I am on Techfios site\r\n//When I enter username and password\r\n//And I click on sign in button \r\n//Then Dashboard page should display",
+  "description": "users will be able to login",
   "id": "as-a-user-i-want-a-login-page-so-that-only-authentic",
   "keyword": "Feature",
   "tags": [
@@ -16,31 +16,124 @@ formatter.feature({
     }
   ]
 });
-formatter.scenario({
-  "line": 11,
+formatter.scenarioOutline({
+  "comments": [
+    {
+      "line": 5,
+      "value": "#\tScenario: Valid users should be able to login"
+    },
+    {
+      "line": 6,
+      "value": "#\tGiven I am on Techfios site"
+    },
+    {
+      "line": 7,
+      "value": "#\tWhen I enter username and password"
+    },
+    {
+      "line": 8,
+      "value": "#\tAnd I click on sign in button"
+    },
+    {
+      "line": 9,
+      "value": "#\tThen Dashboard page should display"
+    }
+  ],
+  "line": 12,
   "name": "Valid users should be able to login",
   "description": "",
   "id": "as-a-user-i-want-a-login-page-so-that-only-authentic;valid-users-should-be-able-to-login",
-  "type": "scenario",
-  "keyword": "Scenario"
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 12,
+  "line": 13,
   "name": "I am on Techfios site",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 13,
-  "name": "I enter \"\u003cusename\u003e\" and \"\u003cpassword\u003e\"",
+  "line": 14,
+  "name": "I enter \"\u003cusername\u003e\" and \"\u003cpassword\u003e\"",
   "keyword": "When "
 });
 formatter.step({
-  "line": 14,
+  "line": 15,
   "name": "I click on sign in button",
   "keyword": "And "
 });
 formatter.step({
+  "line": 16,
+  "name": "Dashboard page should display",
+  "keyword": "Then "
+});
+formatter.examples({
+  "line": 18,
+  "name": "",
+  "description": "",
+  "id": "as-a-user-i-want-a-login-page-so-that-only-authentic;valid-users-should-be-able-to-login;",
+  "rows": [
+    {
+      "cells": [
+        "username",
+        "password"
+      ],
+      "line": 19,
+      "id": "as-a-user-i-want-a-login-page-so-that-only-authentic;valid-users-should-be-able-to-login;;1"
+    },
+    {
+      "cells": [
+        "demo@techfios",
+        "abc123"
+      ],
+      "line": 20,
+      "id": "as-a-user-i-want-a-login-page-so-that-only-authentic;valid-users-should-be-able-to-login;;2"
+    }
+  ],
+  "keyword": "Examples"
+});
+formatter.before({
+  "duration": 4655390016,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 20,
+  "name": "Valid users should be able to login",
+  "description": "",
+  "id": "as-a-user-i-want-a-login-page-so-that-only-authentic;valid-users-should-be-able-to-login;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 1,
+      "name": "@dashboard"
+    },
+    {
+      "line": 1,
+      "name": "@Smoke"
+    }
+  ]
+});
+formatter.step({
+  "line": 13,
+  "name": "I am on Techfios site",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 14,
+  "name": "I enter \"demo@techfios\" and \"abc123\"",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "When "
+});
+formatter.step({
   "line": 15,
+  "name": "I click on sign in button",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 16,
   "name": "Dashboard page should display",
   "keyword": "Then "
 });
@@ -48,42 +141,42 @@ formatter.match({
   "location": "LoginSteps.I_am_on_Techfios_site()"
 });
 formatter.result({
-  "duration": 4912857486,
+  "duration": 148401730,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "\u003cusename\u003e",
+      "val": "demo@techfios",
       "offset": 9
     },
     {
-      "val": "\u003cpassword\u003e",
-      "offset": 25
+      "val": "abc123",
+      "offset": 29
     }
   ],
   "location": "LoginSteps.I_enter_and(String,String)"
 });
 formatter.result({
-  "duration": 318514999,
+  "duration": 235434765,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.I_click_on_sign_in_button()"
 });
 formatter.result({
-  "duration": 2046018076,
+  "duration": 2060063926,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.dashboard_page_should_display()"
 });
 formatter.result({
-  "duration": 13000237,
+  "duration": 10807657,
   "status": "passed"
 });
 formatter.after({
-  "duration": 924630358,
+  "duration": 655627363,
   "status": "passed"
 });
 });

@@ -1,5 +1,7 @@
 package steps;
 
+import java.sql.SQLException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -20,7 +22,7 @@ import util.Database;
 //call the browser factory to instantiate the browser
 
 public class LoginSteps extends BasePage {
-//based your user level: 4eg, admin & regular user step page with 1normal step page and 1priority step page
+
 //create object method
 	WebDriver driver;
 	LoginPage login;
@@ -29,17 +31,16 @@ public class LoginSteps extends BasePage {
 
 	// Create a marking - calling Login class and enter details
 
-	/*
-	 * @Before public void beforeRun() { driver = BrowserFactory.init(); login =
-	 * PageFactory.initElements(driver, LoginPage.class); dashboardPage =
-	 * PageFactory.initElements(driver, DashBoardPage.class); }
-	 */
+	
+	  @Before 
+	  public void beforeRun() { 
+		  driver = BrowserFactory.init(); login =
+		  PageFactory.initElements(driver, LoginPage.class); dashboardPage =
+	      PageFactory.initElements(driver, DashBoardPage.class); }
+	 
 
 	@Given("^I am on Techfios site$")
-	public void I_am_on_Techfios_site() throws Throwable {
-		driver = BrowserFactory.init();
-		login = PageFactory.initElements(driver, LoginPage.class);
-		dashboardPage = PageFactory.initElements(driver, DashBoardPage.class); 
+	public void I_am_on_Techfios_site(){
 	}
 
 	@When("^I enter username and password$")
@@ -53,19 +54,19 @@ public class LoginSteps extends BasePage {
 	}
 	//Using parameterizing and not hard coding to enter multiple different data(scenario outline)
 	@When("^I enter \"([^\"]*)\" and \"([^\"]*)\"$")
-	    		public void I_enter_and(String username, String password) throws Throwable {
+	    		public void I_enter_and(String username, String password){
 	    			login.enterUserName(username);
 	    			login.enterPassword(password);
 	    			//screenShot(driver,"C:\\Users\\Dhrubajyoti\\Desktop\\TF Pallavi\\Selenium\\Screenshot\\test.jpg");
 	}
 
 	@When("^I click on sign in button$")
-	public void I_click_on_sign_in_button() throws Throwable {
+	public void I_click_on_sign_in_button(){
 		login.clickSignInButton();
 	}
 
 	@Then("^Dashboard page should display$")
-	public void dashboard_page_should_display() throws Throwable {
+	public void dashboard_page_should_display(){
 		String expected = "Dashboard- iBilling";
 		Assertion.equals("Wrong Page displayed", dashboardPage.getPageTitle(),expected);
 	}
