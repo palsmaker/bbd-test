@@ -60,9 +60,7 @@ import org.openqa.selenium.support.How;
 	}
 
 	public void Sales_Element() {
-
 		Sales_Locator.click();
-
 	}
 
 	public void orders_Element() {
@@ -105,7 +103,8 @@ import org.openqa.selenium.support.How;
 		Settings_Locator.click();
 	}
 
-	//public String getPageTitle() {
-		//return null;
+	public String getPageTitle() {
+	return driver.getTitle();
 	
 }
+    }

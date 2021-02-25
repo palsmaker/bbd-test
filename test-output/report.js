@@ -48,7 +48,7 @@ formatter.match({
   "location": "LoginSteps.I_am_on_Techfios_site()"
 });
 formatter.result({
-  "duration": 5633004068,
+  "duration": 4912857486,
   "status": "passed"
 });
 formatter.match({
@@ -65,25 +65,25 @@ formatter.match({
   "location": "LoginSteps.I_enter_and(String,String)"
 });
 formatter.result({
-  "duration": 272093219,
+  "duration": 318514999,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.I_click_on_sign_in_button()"
 });
 formatter.result({
-  "duration": 2472869238,
+  "duration": 2046018076,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.dashboard_page_should_display()"
 });
 formatter.result({
-  "duration": 47042,
+  "duration": 13000237,
   "status": "passed"
 });
 formatter.after({
-  "duration": 2703920555,
+  "duration": 924630358,
   "status": "passed"
 });
 });

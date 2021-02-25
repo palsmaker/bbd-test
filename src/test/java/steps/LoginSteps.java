@@ -12,6 +12,7 @@ import cucumber.api.java.en.When;
 import page.BasePage;
 import page.DashBoardPage;
 import page.LoginPage;
+import util.Assertion;
 import util.BrowserFactory;
 import util.Database;
 
@@ -23,7 +24,7 @@ public class LoginSteps extends BasePage {
 //create object method
 	WebDriver driver;
 	LoginPage login;
-	DashBoardPage dashboardPage; // (camel case written with a hump)
+	DashBoardPage dashboardPage; 
 	Database database;
 
 	// Create a marking - calling Login class and enter details
@@ -38,6 +39,7 @@ public class LoginSteps extends BasePage {
 	public void I_am_on_Techfios_site() throws Throwable {
 		driver = BrowserFactory.init();
 		login = PageFactory.initElements(driver, LoginPage.class);
+		dashboardPage = PageFactory.initElements(driver, DashBoardPage.class); 
 	}
 
 	@When("^I enter username and password$")
@@ -65,7 +67,7 @@ public class LoginSteps extends BasePage {
 	@Then("^Dashboard page should display$")
 	public void dashboard_page_should_display() throws Throwable {
 		String expected = "Dashboard- iBilling";
-		//Assertion.equals("Wrong Page displayed", dashboardPage.getPageTitle(), expected);
+		Assertion.equals("Wrong Page displayed", dashboardPage.getPageTitle(),expected);
 	}
 
 	@After
