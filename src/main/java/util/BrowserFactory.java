@@ -18,7 +18,7 @@ public class BrowserFactory {
 		  driver.manage().window().maximize();
 		  driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		
-		  driver.get("http://www.techfios.com/ibilling/?ng=admin/");
+		  driver.get("http://www.techfios.com/billing/?ng=admin/");
 		  return driver;
 		
 	  }
