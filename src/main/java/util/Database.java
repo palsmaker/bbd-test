@@ -7,7 +7,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class Database {
-	
+
+	//using getter and setter methods for security reasons we encapsulate it
 	public static String get(String columnName)throws ClassNotFoundException, SQLException{
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/midspring2020", "root", "kanbay80");

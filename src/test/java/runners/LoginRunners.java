@@ -13,7 +13,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "./src/test/java/features/",
- tags = {"@smoke", "@sprint"}, 
+ tags = {"@smoke"}, 
  glue = {"steps" },
  dryRun = false,
  monochrome = true,
@@ -33,3 +33,4 @@ public class LoginRunners {
 //keyword driven = using some keywords, for example browser we can use url for the test case, creating a level of obstruction
 //BDD framework
 //Hybrid (BDD with datasource)
+//write automation scripts from database, connecting with jdbc java database connectivity(API)java code with database
